@@ -64,6 +64,7 @@
             Repeat-Password: <br>
             <input type="password" name="password1" placeholder="Re-Enter Your Password"><br>
             <button type="submit" value="register" name="submit">Register New Account</button>
+            asdasd
         </form>
     </div>
 </body>
