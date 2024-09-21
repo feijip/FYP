@@ -30,12 +30,13 @@
                 {
                     require_once"Database.php";
                     //$sql = "INSERT INTO manager (name,email,password) VALUE ($name,$email,$hash)";
+                    $name = mysqli_real_escape_string($conection, $name);
                     $email = mysqli_real_escape_string($conection, $email);
-                    $sql_check = "SELECT * FROM manager WHERE email = '$email'";
+                    $sql_check = "SELECT * FROM manager WHERE email = '$email','$name'";
                     $result = mysqli_query($conection, $sql_check);
 
                     if(mysqli_num_rows($result) > 0) {
-                        echo "This account already exists. Please use a different email.<br>";
+                        echo "This account already exists. Please use a different name or email.<br>";
                     } 
                     else 
                     {
@@ -64,7 +65,6 @@
             Repeat-Password: <br>
             <input type="password" name="password1" placeholder="Re-Enter Your Password"><br>
             <button type="submit" value="register" name="submit">Register New Account</button>
-            asdasd
         </form>
     </div>
 </body>
