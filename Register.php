@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manager Register Page</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="feijip.css">
 </head>
 <body>
-    <h1>Welcome to Feijip Enterprice</h1>
+    <h1>Welcome to Feijip Enterprise</h1>
     <div class="form">
         <h1>Register Form</h1>
         <?php
-            /*print_r($_POST);/*为了看function是怎样跑的*/
             if(isset($_POST["submit"]))
             {
                 $name = $_POST["name"];
@@ -28,11 +29,10 @@
                 }
                 else
                 {
-                    require_once"Database.php";
-                    //$sql = "INSERT INTO manager (name,email,password) VALUE ($name,$email,$hash)";
+                    require_once "Database.php";
                     $name = mysqli_real_escape_string($conection, $name);
                     $email = mysqli_real_escape_string($conection, $email);
-                    $sql_check = "SELECT * FROM manager WHERE email = '$email' || '$name'";
+                    $sql_check = "SELECT * FROM manager WHERE email = '$email' OR name = '$name'";
                     $result = mysqli_query($conection, $sql_check);
 
                     if(mysqli_num_rows($result) > 0) {
@@ -40,7 +40,6 @@
                     } 
                     else 
                     {
-                        // Insert new user
                         $sql = "INSERT INTO manager (name, email, password) VALUES ('$name','$email','$password')";
                         
                         if (mysqli_query($conection, $sql)) {
@@ -48,24 +47,31 @@
                         } else {
                             echo "Error: " . mysqli_error($conection) . "<br>";
                         }
-                        echo "Sanitized Name: $name <br>";
-                        echo "Sanitized Email: $email <br>";
-                        echo "Sanitized Password: $password <br>";
                     }
                 }
             }
         ?>
-        <form action ="Register.php" method="post">
-            Username: <br>
-            <input type="text" name="name" placeholder="Enter Your Name"><br>
-            Email: <br>
-            <input type="email" name="email" placeholder="Enter Your Email Address"><br>
-            Password: <br>
-            <input type="password" name="password" placeholder="Enter Your Password"><br>
-            Repeat-Password: <br>
-            <input type="password" name="password1" placeholder="Re-Enter Your Password"><br>
-            <button type="submit" value="register" name="submit">Register New Account</button>
-        </form>
+        <div class="register">
+            <form action="Register.php" method="post">
+                <div class="a">
+                    Username: <br>
+                    <input type="text" name="name" placeholder="Enter Your Name"><br>
+                </div>
+                <div class="a">
+                    Email: <br>
+                    <input type="email" name="email" placeholder="Enter Your Email Address"><br>
+                </div>
+                <div class="a">
+                    Password: <br>
+                    <input type="password" name="password" placeholder="Enter Your Password"><br>
+                </div>
+                <div class="a">
+                    Repeat-Password: <br>
+                    <input type="password" name="password1" placeholder="Re-Enter Your Password"><br>
+                </div>
+                <button type="submit" value="register" name="submit">Register New Account</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
