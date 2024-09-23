@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="feijip.css">
 </head>
 <body>
-    <h1>Welcome to Feijip Enterprise</h1>
     <div class="form">
         <h1>Register Form</h1>
         <?php
@@ -43,7 +42,8 @@
                     
                     else 
                     {
-                        $sql = "INSERT INTO manager (name, email, password) VALUES ('$name','$email','$password')";
+                        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                        $sql = "INSERT INTO manager (name, email, password) VALUES ('$name','$email','$hashed_password')";
                         
                         if (mysqli_query($conection, $sql)) {
                             echo "<script>alert('You are now registered.');</script>";
@@ -57,7 +57,7 @@
             }
         ?>
         <div class="register">
-            <form action="Register.php" method="post">
+            <form action="CustomerRegister.php" method="post">
                 <div class="a">
                     Username: <br>
                     <input type="text" name="name" placeholder="Enter Your Name"><br>
@@ -77,6 +77,7 @@
                 <button type="submit" value="register" name="submit">Register New Account</button>
             </form>
         </div>
+        <a href="CustomerLogin.php">Log-In</a>
     </div>
 </body>
 </html>
