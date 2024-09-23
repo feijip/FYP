@@ -21,11 +21,13 @@
 
                 if (empty($name) || empty($email) || empty($password) || empty($password1)) 
                 {
-                    echo "All Fields Are Required. Please Enter Them Again.";
+                    echo "<script>alert('All Fields Are Required. Please Enter Them Again.');</script>";
+                    //echo "All Fields Are Required. Please Enter Them Again.";
                 } 
                 elseif ($password != $password1) 
                 {
-                    echo "Passwords do not match.";
+                    echo "<script>alert('Passwords do not match.');</script>";
+                    //echo "Passwords do not match.";
                 }
                 else
                 {
@@ -36,8 +38,9 @@
                     $result = mysqli_query($conection, $sql_check);
 
                     if(mysqli_num_rows($result) > 0) {
-                        echo "This account already exists. Please use a different Name or Email.<br>";
+                        echo "<script>alert('This account already exists. Please use a different Name or Email.');</script>";
                     } 
+                    
                     else 
                     {
                         $sql = "INSERT INTO manager (name, email, password) VALUES ('$name','$email','$password')";
