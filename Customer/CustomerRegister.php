@@ -59,19 +59,15 @@
         <div class="register">
             <form action="CustomerRegister.php" method="post">
                 <div class="a">
-                    Username: <br>
-                    <input type="text" name="name" placeholder="Enter Your Name"><br>
+                    <input type="text" name="username" placeholder="Enter Your Name">
                 </div>
                 <div class="a">
-                    Email: <br>
                     <input type="email" name="email" placeholder="Enter Your Email Address"><br>
                 </div>
                 <div class="a">
-                    Password: <br>
                     <input type="password" name="password" placeholder="Enter Your Password"><br>
                 </div>
                 <div class="a">
-                    Repeat-Password: <br>
                     <input type="password" name="password1" placeholder="Re-Enter Your Password"><br>
                 </div>
                 <button type="submit" value="register" name="submit">Register New Account</button>

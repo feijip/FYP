@@ -1,34 +1,34 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+/* Basic reset for margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-h1 {
-    text-align: center;
-    color: #4CAF50;
-}
-
-/* Form Styling */
+/* Form container styling */
 .form {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 20px;
-    width: 300px;
+    background-color: white;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
 }
 
-.form h1 {
-    font-size: 24px;
+/* Form header styling */
+h1 {
     margin-bottom: 20px;
+    font-size: 24px;
     color: #333;
 }
 
@@ -37,38 +37,67 @@ h1 {
     margin-bottom: 15px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 5px 0 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 5px;
     font-size: 16px;
+    background-color: #f9f9f9;
 }
 
-/* Button Styling */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* Button styling */
 button {
-    background-color: #4CAF50;
+    background-color: #28a745;
     color: white;
-    padding: 12px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 12px 20px;
     width: 100%;
+    border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #218838;
 }
 
-/* Responsiveness */
-@media (max-width: 600px) {
+/* Link styling */
+a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 500px) {
     .form {
-        width: 100%;
-        padding: 15px;
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
     }
 }

@@ -28,7 +28,8 @@
                         // Verify the entered password with the stored hashed password
                         if (password_verify($password, $hashed_password)) {
                             // If password matches, redirect to Home.html
-                            header("Location: Home.html");
+                            echo "<script>alert('You are now logged in. Redirecting to home page...');
+                            window.location.href='Home.html';</script>";
                         } else {
                             echo "<script>alert('Invalid login credentials. Please try again.');</script>";
                         }
@@ -41,15 +42,12 @@
             <h1>Welcome To Feijip Enterprise</h1>
             </div>
             <div class="login">
-                Username:
                 <input type="text" placeholder="Enter Your Name" name="name" required>
             </div>
             <div class="login">
-                Email:
                 <input type="email" placeholder="Enter Your Email" name="email" required>
             </div>
             <div class="login">
-                Password:
                 <input type="password" placeholder="Enter Your Password" name="password" required>
             </div>
             <button type="submit" value="login" name="login">Log-In</button>
