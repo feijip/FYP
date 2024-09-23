@@ -46,9 +46,11 @@
                         $sql = "INSERT INTO manager (name, email, password) VALUES ('$name','$email','$password')";
                         
                         if (mysqli_query($conection, $sql)) {
-                            echo "You are now registered.<br>";
+                            echo "<script>alert('You are now registered.');</script>";
+                            //echo "You are now registered.<br>";
                         } else {
-                            echo "Error: " . mysqli_error($conection) . "<br>";
+                            $errorMessage = mysqli_error($conection);
+                            echo "<script>alert('Error: " . $errorMessage . "');</script>";
                         }
                     }
                 }
