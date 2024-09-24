@@ -59,7 +59,7 @@
         <div class="register">
             <form action="CustomerRegister.php" method="post">
                 <div class="a">
-                    <input type="text" name="username" placeholder="Enter Your Name">
+                    <input type="text" name="name" placeholder="Enter Your Name">
                 </div>
                 <div class="a">
                     <input type="email" name="email" placeholder="Enter Your Email Address"><br>
