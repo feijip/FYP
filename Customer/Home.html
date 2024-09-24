@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Sidebar.css">
 </head>
 <body>
-    <header><h1>Welome To Feijip Enterprice</h1></header>
+    <header>
+        <div class="sidebaricon" onclick="sidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <div class="icon" onclick="sidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Booking Appointment</a>
+        <a href="#">About Us</a>
+    </div>
+
+    <script>
+        function sidebar() {
+            const sidebar = document.querySelector(".sidebar");  
+            const icon = document.querySelector(".icon");
+            const width = sidebar.style.width;
+
+            if (width === "300px") {
+                sidebar.style.width = "0";
+                icon.style.display = "none";
+            } else {
+                sidebar.style.width = "300px";
+                icon.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
