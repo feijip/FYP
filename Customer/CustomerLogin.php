@@ -41,13 +41,13 @@
             <div class="sub">
             <h1>Welcome To Feijip Enterprise</h1>
             </div>
-            <div class="login">
+            <div class="a">
                 <input type="text" placeholder="Enter Your Name" name="name" required>
             </div>
-            <div class="login">
+            <div class="a">
                 <input type="email" placeholder="Enter Your Email" name="email" required>
             </div>
-            <div class="login">
+            <div class="a">
                 <input type="password" placeholder="Enter Your Password" name="password" required>
             </div>
             <button type="submit" value="login" name="login">Log-In</button>
