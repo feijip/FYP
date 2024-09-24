@@ -30,7 +30,8 @@
                             // If password matches, redirect to Home.html
                             echo "<script>alert('You are now logged in. Redirecting to home page...');
                             window.location.href='Home.html';</script>";
-                        } else {
+                        } 
+                        else {
                             echo "<script>alert('Invalid login credentials. Please try again.');</script>";
                         }
                     } else {

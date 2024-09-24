@@ -23,12 +23,14 @@ header {
 
 .sidebaricon {
     font-size: 30px;
-    display: flex;
-    top: 15px;
+    display: block;
+    position: fixed;
+    top: 33px;
     left: 15px;
     cursor: pointer;
     color: #818181;
 }
+
 
 .sidebaricon i{
     display: flex;
