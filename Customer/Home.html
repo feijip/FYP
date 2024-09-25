@@ -6,6 +6,8 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="Sidebar.css">
+    <link rel="stylesheet" href="Usericon.css">
+    <script src="Sidebar.js"></script>
 </head>
 <body>
     <header>
@@ -28,38 +30,9 @@
                 <a href="#">Booking Appointment</a>
                 <a href="#">Setting</a>
                 <a href="#">About Us</a>
+                <a href="CustomerLogOut.php"><button class="logout">Log Out</button></a>
             </ul>
         </nav>
     </div>
-    
-    <div class="userbar">
-        <div class="usericon" onclick="details()">
-            <i class='fas fa-user-circle'></i>
-        </div>
-        <nav>
-            <ul>
-                <button><a href="CustomerLogOut.php">Log Out</a></button>
-            </ul>
-        </nav>
-    </div>
-
-    <script>
-        function sidebar() {
-            const sidebar = document.querySelector(".sidebar");  
-            const icon = document.querySelector(".icon");
-            const body = document.body;
-            const width = sidebar.style.width;
-            
-            if (width === "300px") {
-                sidebar.style.width = "0";
-                icon.style.display = "none";
-                body.style.marginLeft = "0";
-            } else {
-                sidebar.style.width = "300px";
-                icon.style.display = "block";
-                body.style.marginLeft = "300px";
-            }
-        }
-    </script>
 </body>
 </html>
