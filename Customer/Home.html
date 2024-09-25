@@ -13,16 +13,34 @@
             <i class="fas fa-bars"></i>
         </div>
         <h1>Welcome To Feijip Enterprice</h1>
+        <div class="usericon" onclick="details()">
+            <i class='fas fa-user-circle'></i>
+        </div>
     </header>
 
     <div class="sidebar">
         <div class="icon" onclick="sidebar()">
             <i class="fas fa-times"></i>
         </div>
-        <a href="#">Home</a>
-        <a href="#">Booking Appointment</a>
-        <a href="#">Setting</a>
-        <a href="#">About Us</a>
+        <nav>
+            <ul>
+                <a href="#">Home</a>
+                <a href="#">Booking Appointment</a>
+                <a href="#">Setting</a>
+                <a href="#">About Us</a>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="userbar">
+        <div class="usericon" onclick="details()">
+            <i class='fas fa-user-circle'></i>
+        </div>
+        <nav>
+            <ul>
+                <button><a href="CustomerLogOut.php">Log Out</a></button>
+            </ul>
+        </nav>
     </div>
 
     <script>

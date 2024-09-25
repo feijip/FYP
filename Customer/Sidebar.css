@@ -15,10 +15,11 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #000000;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    border-top-right-radius: 35px;
 }
 
 .sidebaricon {
@@ -30,7 +31,6 @@ header {
     cursor: pointer;
     color: #818181;
 }
-
 
 .sidebaricon i{
     display: flex;
@@ -52,7 +52,7 @@ header {
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 15px 0px 15px 0px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -63,4 +63,18 @@ header {
 
 .sidebar a:hover {
     color: #f1f1f1;
+}
+
+.usericon{
+    font-size: 35px;
+    margin-top: 22px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+}
+
+.details{
+    right: 50px;
+    overflow-x: hidden;
+    cursor: pointer;
 }
