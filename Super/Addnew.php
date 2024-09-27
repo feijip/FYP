@@ -9,6 +9,6 @@
         $conection = mysqli_connect($server,$user,$dt_password,$new);
     }
     catch(mysqli_sql_exception){
-        die("Something went Wrong. Open Your xampp");
+        die("Something went wrong. Open Your Xampp");
     }
 ?>
