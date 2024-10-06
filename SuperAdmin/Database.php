@@ -3,7 +3,7 @@
     $user = "root";
     $dt_password = "";
     $new = "register";
-    $connection = "";
+    $conection = "";
 
     try{
         $conection = mysqli_connect($server,$user,$dt_password,$new);
