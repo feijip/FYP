@@ -73,7 +73,6 @@
                         $errorMessage = mysqli_error($conection);
                         echo "<script>alert('Error: " . $errorMessage . "');</script>";
                     }
-                    
                 }
             }
         }
