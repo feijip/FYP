@@ -20,7 +20,7 @@
 
                 if (empty($name) || empty($email) || empty($password) || empty($password1)) 
                 {
-                    echo "<script>alert('All Fields Are Required. Please Enter Them Again.');</script>";
+                    echo "<script>alert('All Fields Are Required. Please Enter Again.');</script>";
                     //echo "All Fields Are Required. Please Enter Them Again.";
                 } 
                 elseif ($password != $password1) 
