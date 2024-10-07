@@ -55,7 +55,7 @@
                 $name = mysqli_real_escape_string($conection,$name);
                 $email = mysqli_real_escape_string($conection,$email);
                 $phone = mysqli_real_escape_string($conection,$phone);
-                $sql_check = "SELECT * FROM addnew WHERE email = '$email' OR name = '$name' OR phone ='$phone'";
+                $sql_check = "SELECT * FROM adminregister WHERE email = '$email' OR name = '$name' OR phone ='$phone'";
                 $result = mysqli_query($conection,$sql_check);
 
                 if(mysqli_num_rows($result) > 0){
@@ -64,7 +64,7 @@
 
                 else{
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                    $sql = "INSERT INTO addnew (name,email,password,phone) VALUE ('$name','$email','$hashed_password','phone')";
+                    $sql = "INSERT INTO adminregister (name,email,password,phone) VALUE ('$name','$email','$hashed_password','$phone')";
 
                     if(mysqli_query($conection,$sql)){
                         echo"<script>alert('Your Now Registered.');</script>";

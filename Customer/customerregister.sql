@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2024 at 08:56 PM
+-- Generation Time: Oct 07, 2024 at 09:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,32 +24,31 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `addnew`
+-- Table structure for table `customerregister`
 --
 
-CREATE TABLE `addnew` (
-  `name` text NOT NULL,
+CREATE TABLE `customerregister` (
   `id` int(11) NOT NULL,
+  `name` text NOT NULL,
   `password` text NOT NULL,
-  `email` text NOT NULL,
-  `phone` text NOT NULL
+  `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `addnew`
+-- Dumping data for table `customerregister`
 --
 
-INSERT INTO `addnew` (`name`, `id`, `password`, `email`, `phone`) VALUES
-('Lim', 1, '$2y$10$DfXL5Q.5WTzlEEfe0j0DI.czN.xVSekoSeL2f/sFaAMbi8ijXy3O.', 'haohao6767@gmail.com', 'phone');
+INSERT INTO `customerregister` (`id`, `name`, `password`, `email`) VALUES
+(2, 'Lim', '$2y$10$PijGN1ZsSZNkjkkc5wsC2uzY0wCtp4Te5k4cbHpLAbJnUW9LFcNvK', 'haohao6767@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `addnew`
+-- Indexes for table `customerregister`
 --
-ALTER TABLE `addnew`
+ALTER TABLE `customerregister`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -57,10 +56,10 @@ ALTER TABLE `addnew`
 --
 
 --
--- AUTO_INCREMENT for table `addnew`
+-- AUTO_INCREMENT for table `customerregister`
 --
-ALTER TABLE `addnew`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `customerregister`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

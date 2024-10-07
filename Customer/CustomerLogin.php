@@ -18,7 +18,7 @@
                     require_once "Database.php";
 
                     // SQL query to retrieve the user based on name and email
-                    $sql = "SELECT * FROM manager WHERE name = '$name' AND email = '$email'";
+                    $sql = "SELECT * FROM customerregister WHERE name = '$name' AND email = '$email'";
                     $result = mysqli_query($conection, $sql);
 
                     if (mysqli_num_rows($result) > 0) {

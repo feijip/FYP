@@ -33,7 +33,7 @@
                     require_once "Database.php";
                     $name = mysqli_real_escape_string($conection, $name);
                     $email = mysqli_real_escape_string($conection, $email);
-                    $sql_check = "SELECT * FROM manager WHERE email = '$email' OR name = '$name'";
+                    $sql_check = "SELECT * FROM customerregister WHERE email = '$email' OR name = '$name'";
                     $result = mysqli_query($conection, $sql_check);
 
                     if(mysqli_num_rows($result) > 0) {
@@ -43,7 +43,7 @@
                     else 
                     {
                         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-                        $sql = "INSERT INTO manager (name, email, password) VALUES ('$name','$email','$hashed_password')";
+                        $sql = "INSERT INTO customerregister (name, email, password) VALUES ('$name','$email','$hashed_password')";
                         
                         if (mysqli_query($conection, $sql)) {
                             echo "<script>alert('You are now registered.');</script>";

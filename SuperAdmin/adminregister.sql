@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2024 at 01:36 PM
+-- Generation Time: Oct 07, 2024 at 09:38 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,33 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `manager`
+-- Table structure for table `adminregister`
 --
 
-CREATE TABLE `manager` (
+CREATE TABLE `adminregister` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
-  `email` text NOT NULL,
-  `password` text NOT NULL
+  `password` text NOT NULL,
+  `phone` text NOT NULL,
+  `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `manager`
+-- Dumping data for table `adminregister`
 --
 
-INSERT INTO `manager` (`id`, `name`, `email`, `password`) VALUES
-(22, 'xuwei', 'pxw1225@gmail.com', '$2y$10$5hLOejzxtCAgSGXneclc8etEjtuDIx3vt.q/UG8QvUgPlwX.i.kSK'),
-(23, 'Lim', 'haohao6767@gmail.com', '$2y$10$LzXJAf9c3zsX5PQN/nHRo.EDobJYZZfdnpK0U/YiF0HZp4YZ8kJvW'),
-(24, 'feijip', 'xiaohaha43@gmail.com', '$2y$10$MEAdFRewg5HYx20P3HrA7eUkRXuYKUy.et1Ucr1rd0tVzhV02MT76');
+INSERT INTO `adminregister` (`id`, `name`, `password`, `phone`, `email`) VALUES
+(2, 'xuwei', '$2y$10$mG9OCNfiaWcL0UPF5q9t5u0PKmm6dIWJUsj8RvniTCFvLG9.pkbE2', '01155091330', 'xuwei1225@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `manager`
+-- Indexes for table `adminregister`
 --
-ALTER TABLE `manager`
+ALTER TABLE `adminregister`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -58,10 +57,10 @@ ALTER TABLE `manager`
 --
 
 --
--- AUTO_INCREMENT for table `manager`
+-- AUTO_INCREMENT for table `adminregister`
 --
-ALTER TABLE `manager`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+ALTER TABLE `adminregister`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
